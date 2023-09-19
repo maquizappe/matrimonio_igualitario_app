@@ -2,46 +2,46 @@
 body{    
     overflow: hidden;   
     font-family: 'Inter', sans-serif;
+    cursor: none;
 }
 
 .content{
     display: flex;
 justify-content: center;
 flex-shrink: 0;
-margin-top: 200px;
+margin-top: 150px;
 
 }
-.title{font-size: 80px;
+.title{font-size: 60px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
 
 }
 .caption{
-    text-align: justify;
-font-family: Inter;
-font-size: 20px;
+    text-align: left;
+font-size: 15px;
 font-style: normal;
 font-weight: 300;
-line-height: 30px; /* 150% */
-margin-top: 50px;
-width: 268px;
+line-height: 25px; /* 150% */
+margin-top: 10px;
+width: 220px;
 height: 230px;
-margin-left: 430px;
+margin-left: 325px;
 }
 .subtitle{   
-font-size: 180px;
+font-size: 140px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
 }
 .cursor-follow{
     position: absolute;
-    background: url(/public/logo192.png) no-repeat 50% 50%;
+    background: url('/brides.png') no-repeat 50% 50%;
     background-size: cover;
-    width: 100px;
-    mix-blend-mode: difference;
-    height: 200px;
+    width: 80px;
+    height: 150px;
+    mix-blend-mode: difference;    
     z-index: 2;
     user-select: none;
     pointer-events: none;
