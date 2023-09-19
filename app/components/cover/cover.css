@@ -37,7 +37,7 @@ line-height: normal;
 }
 .cursor-follow{
     position: absolute;
-    background: url('/brides.png') no-repeat 50% 50%;
+    background: url('/images/brides.png') no-repeat 50% 50%;
     background-size: cover;
     width: 80px;
     height: 150px;
