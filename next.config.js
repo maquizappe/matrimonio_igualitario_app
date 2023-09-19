@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-   reactStrictMode: true,
+module.exports = {
+    basePath: process.env.NODE_ENV === 'production' ? '/matrimonio_igualitario_app' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/matrimonio_igualitario_app/' : '',
+    trailingSlash: true, // Ensure trailing slashes are used for routes
+    // ...
+    output: {
+      // Specify the directory where you want to export your site
+      dir: 'out', // Change this to your desired output directory
+      // Specify that you want to export the site as static HTML
+      export: true,
+    },
+  };
   
-   // Add basePath
-    basePath: '/matrimonio_igualitario_app/', 
-  
-  }
-  
-  module.exports = nextConfig
