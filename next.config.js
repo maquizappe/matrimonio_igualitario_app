@@ -3,7 +3,7 @@ const nextConfig = {
    reactStrictMode: true,
   
    // Add basePath
-    basePath: '/matrimonio_igualitario_app', 
+    basePath: '/matrimonio_igualitario_app/', 
   
   }
   
