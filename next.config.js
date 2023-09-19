@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
+   reactStrictMode: true,
   
    // Add basePath
-    basePath: '/github-pages',
+    basePath: '/matrimonio_igualitario_app', 
   
   }
   
