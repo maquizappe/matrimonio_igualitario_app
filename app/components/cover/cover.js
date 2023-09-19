@@ -44,7 +44,9 @@ function Cover() {
   </div>
   </div>
     </div>
-    <div className="cursor-follow" ref={cursor}></div>
+    <div className="cursor-follow" ref={cursor}>
+    <img src="/images/brides.png" alt="Brides" />
+    </div>
     <style>
     
     </style>
