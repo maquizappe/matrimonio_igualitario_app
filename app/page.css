@@ -1,0 +1,4 @@
+.content {
+    overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+    max-height: 100vh; /* Limit the maximum height to the viewport height */
+  }
