@@ -2,6 +2,7 @@
   display: flex;
   flex-direction:row;
   margin-top: 100px;
+  cursor: none;
 }
 .pie {
 
@@ -124,8 +125,6 @@ width: 370px;
 
 
 
-
-
 .cursor-follow-pie {
   position: absolute;
   width: 10px;
@@ -142,4 +141,16 @@ width: 370px;
   height: 100%;
   object-fit: cover;
   /* This maintains the image's aspect ratio while covering the entire container */
+}
+
+.cursordot{
+  position:fixed;
+  top:0;
+  left:0;
+  border-radius: 50%;
+  z-index:1;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  background-color: #3E3E3E ;
 }

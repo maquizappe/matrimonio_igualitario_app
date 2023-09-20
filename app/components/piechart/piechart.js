@@ -59,8 +59,24 @@ function Piechart() {
      };
    }, []);
   */
+
+   useEffect(() => {
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+
+    window.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+    });
+  }, []); 
+
+
   return (
-    <div className="Piesection">
+    <div className="Piesection">     
+
+     <div class="cursordot" data-cursor-dot> </div>
       <div className="pie">
         <img src="./pie.png" alt="pie" />
       </div>
@@ -99,6 +115,10 @@ function Piechart() {
 
       <div  className="text"> Argentina fue el primer país en América Latina en legalizar el matrimonio LGBTQ+ en 2010, 
 </div>
+
+
+
+
 
       {/*   {cursorVisible && (
         <div className="cursor-follow-pie" ref={cursor}>
