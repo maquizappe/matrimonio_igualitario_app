@@ -125,7 +125,7 @@ const loadData = async () => {
                         .attr("y", imageY)
                         .attr("width", 100)
                         .attr("height", 30)
-                        .attr("xlink:href", "/ring.png");
+                        .attr("xlink:href", "./ring.png");
 
                     // Push the image element to the array
                     imageElements.push(image);
