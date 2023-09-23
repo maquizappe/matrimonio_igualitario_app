@@ -50,8 +50,11 @@ function Cover() {
     });
   }, []);
  */
+
+
+  
   return (
-    <div className="App">
+    <div className="App">  
       <div className="contentcover">
         <div className="contentTile">
           <div className="title">Matrimonio</div>

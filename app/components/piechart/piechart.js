@@ -1,82 +1,15 @@
 import './piechart.css';
 import React, { useRef, useEffect, useState } from "react";
+import CursorDot from "@/app/components/cursor/cursordot"
 import { gsap } from "gsap";
 
 function Piechart() {
-  /*  const cursor = useRef(null);
-   const animation = useRef(null); // Reference to the GSAP animation instance
- 
-   const posX = useRef(0);
-   const posY = useRef(0);
-   const mouseX = useRef(0);
-   const mouseY = useRef(0);
-   
-   const [cursorVisible, setCursorVisible] = useState(true);
-   const [cursorImage, setCursorImage] = useState("./dot.png");
- 
-   useEffect(() => {
-     animation.current = gsap.timeline();
-     animation.current.to({}, 0.016, {
-       repeat: -1,
-       onRepeat: function () {
-         posX.current += (mouseX.current - posX.current) / 10;
-         posY.current += (mouseY.current - posY.current) / 10;
-         animation.current.set(cursor.current, {
-           css: {
-             left: posX.current - 50,
-             top: posY.current - 50,
-           },
-         });
- 
-         const pieElement = document.querySelector(".Piesection");
-         if (pieElement) {
-           const pieRect = pieElement.getBoundingClientRect();
-           if (
-             mouseX.current >= pieRect.left &&
-             mouseX.current <= pieRect.right &&
-             mouseY.current >= pieRect.top &&
-             mouseY.current <= pieRect.bottom
-           ) {
-             setCursorVisible(true);
-             setCursorImage("./dot.png");
-           } else {
-             setCursorVisible(false);
-           }
-         }
-       },
-     });
- 
-     document.addEventListener("mousemove", function (e) {
-       mouseX.current = e.pageX;
-       mouseY.current = e.pageY;
-     });
- 
-     // Clean up the animation when the component unmounts
-     return () => {
-       if (animation.current) {
-         animation.current.kill(); // Cancel the animation
-       }
-     };
-   }, []);
-  */
-
-   useEffect(() => {
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-
-    window.addEventListener("mousemove", function (e) {
-      const posX = e.clientX;
-      const posY = e.clientY;
-
-      cursorDot.style.left = `${posX}px`;
-      cursorDot.style.top = `${posY}px`;
-    });
-  }, []); 
-
+  
 
   return (
     <div className="Piesection">     
-
-     <div class="cursordot" data-cursor-dot> </div>
+<CursorDot/>
+ 
       <div className="pie">
         <img src="./pie.png" alt="pie" />
       </div>
@@ -117,14 +50,6 @@ function Piechart() {
 </div>
 
 
-
-
-
-      {/*   {cursorVisible && (
-        <div className="cursor-follow-pie" ref={cursor}>
-          <img src={cursorImage} alt="dot" />
-        </div>
-      )} */}
     </div>
   );
 }

@@ -56,3 +56,14 @@ body {
   object-fit: cover;
   /* This maintains the image's aspect ratio while covering the entire container */
 }
+
+.red-cursor {
+  cursor: none;
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 3; /* Higher z-index to ensure it's on top */
+  pointer-events: none;
+}
