@@ -16,7 +16,7 @@ const AreaChart = () => {
     
         const parseTime = timeParse('%Y');
 
-        const x = d3.scaleTime().rangeRound([0, width - 150]);
+        const x = d3.scaleTime().rangeRound([0, width - 170]);
         const y = d3.scaleLinear().rangeRound([height, +10]);
         const ucY = d3.scaleLinear().rangeRound([height, 0]);
 
@@ -37,7 +37,7 @@ var currentIndex = 0; // Keeps track of the current year's index in your data
 
 const loadData = async () => {
     try {
-        const data = await d3.csv('/data.csv', (d) => ({
+        const data = await d3.csv('./data.csv', (d) => ({
           year: parseTime(d.year),
           value: d.value !== '' ? +d.value : 0, // Check if value is empty, if so, set it to 0
           uc: +d.uc,
@@ -101,7 +101,7 @@ const loadData = async () => {
                 .attr("class", "value-label")
                 .attr("x", x(newData[newData.length - 1].year) + 35) // Adjust the x-position as needed
                 .attr("y", y(newData[newData.length - 1].value)) // Use the last data point for the y-position
-                .text(`Marriages: ${newData[newData.length - 1].value.toLocaleString()}`)
+                .text(`Matrimonios: ${newData[newData.length - 1].value.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
                 .attr("font-size", "14px");
 
@@ -110,7 +110,7 @@ const loadData = async () => {
                 .attr("class", "value-label")
                 .attr("x", x(newData[newData.length - 1].year) + 10) // Adjust the x-position as needed
                 .attr("y", y(newData[newData.length - 1].uc)) // Use the last data point for the y-position
-                .text(`Civil unions: ${newData[newData.length - 1].uc.toLocaleString()}`)
+                .text(`Uniones civiles: ${newData[newData.length - 1].uc.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
                 .attr("font-size", "14px");
 
@@ -136,7 +136,7 @@ const loadData = async () => {
                 .attr("class", "value-label")
                 .attr("x", x(newData[newData.length - 1].year) + 10) // Adjust the x-position as needed
                 .attr("y", y(newData[newData.length - 1].uc)) // Use the last data point for the y-position
-                .text(`Civil unions: ${newData[newData.length - 1].uc.toLocaleString()}`)
+                .text(`Uniones civiles: ${newData[newData.length - 1].uc.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
                 .attr("font-size", "14px");
         }
