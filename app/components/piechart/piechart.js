@@ -1,14 +1,12 @@
 import './piechart.css';
 import React, { useRef, useEffect, useState } from "react";
-import CursorDot from "@/app/components/cursor/cursordot"
 import { gsap } from "gsap";
-
 function Piechart() {
   
 
   return (
     <div className="Piesection">     
-<CursorDot/>
+
  
       <div className="pie">
         <img src="./pie.png" alt="pie" />
