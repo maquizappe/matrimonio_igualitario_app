@@ -41,7 +41,7 @@ const DynamicCursor = ({ clientX, clientY }) => {
       </svg>
       {cursor.active && (
         <img
-          src="./brides.png" // Use an absolute path to the image in the public folder
+          src="/brides.png" // Use an absolute path to the image in the public folder
           alt="Custom Cursor"
           style={{
             position: 'absolute',
