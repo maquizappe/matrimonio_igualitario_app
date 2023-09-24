@@ -16,6 +16,7 @@ const useMousePosition = () => {
   };
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     document.body.addEventListener('mousemove', updatePosition, false);
     document.body.addEventListener('mouseenter', updatePosition, false);
 
@@ -23,6 +24,7 @@ const useMousePosition = () => {
       document.body.removeEventListener('mousemove', updatePosition);
       document.body.removeEventListener('mouseenter', updatePosition);
     };
+}
   }, []);
 
   return position;

@@ -1,14 +1,12 @@
 import './cover.css'
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-import useCursorHandlers from '@/app/components/cursor/useCursorHandlers';
+import React, { useRef, useState } from "react";
+/* import useCursorHandlers from '@/app/components/cursor/useCursorHandlers'; */
 
 function Cover() {
-  const cursorHandlers = useCursorHandlers();
+/*   const cursorHandlers = useCursorHandlers(); */
 
-  
   return (
-    <div className="App"  {...cursorHandlers}>  
+    <div className="App" /*  {...cursorHandlers} */>  
       <div className="contentcover">
         <div className="contentTile">
           <div className="title">Matrimonio</div>
@@ -18,12 +16,7 @@ function Cover() {
           </div>
         </div>
       </div>
-     {/*  {cursorVisible && (
-        <div className="cursor-follow" ref={cursor}>
-          <img src="./brides.png" alt="brides" />
         </div>
-      )} */}
-    </div>
   );
 }
 

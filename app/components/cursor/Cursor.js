@@ -9,6 +9,7 @@ const Cursor = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     const handleMouseEnter = () => setIsVisible(true);
     const handleMouseLeave = () => setIsVisible(false);
     document.body.addEventListener('mouseenter', handleMouseEnter);
@@ -18,6 +19,7 @@ const Cursor = () => {
       document.body.removeEventListener('mouseenter', handleMouseEnter);
       document.body.removeEventListener('mouseleave', handleMouseLeave);
     };
+}
   }, []);
 
   // Conditionally return null here if it's a touch device

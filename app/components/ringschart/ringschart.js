@@ -8,6 +8,7 @@ const AreaChart = () => {
     const svgRef = useRef(null);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
         const svg = d3.select(svgRef.current);
         const margin = { top: 20, right: 0, bottom: 30, left: 50 };
         const width = +svg.attr('width') - margin.left - margin.right;
@@ -272,6 +273,7 @@ newData[newData.length - 1].value !== 0 &&
 
 // Call the loadData function to start loading and processing the data
 loadData();
+        }
 }, []);
 return (
     <div className="area-chart">

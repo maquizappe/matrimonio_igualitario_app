@@ -1,10 +1,8 @@
 import './piechart.css';
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-function Piechart() {
-  
+import React from "react";
 
-  return (
+function Piechart() {
+    return (
     <div className="Piesection">     
 
  
