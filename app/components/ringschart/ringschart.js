@@ -51,7 +51,7 @@ const loadData = async () => {
 
     // Line chart
     g.append("path")
-        .attr("class", "line")
+        .attr("class", "line hidden-lines")
         .attr("fill", "none")
         .attr("stroke", "#000000")
         .attr("stroke-width", "0.5px")
@@ -61,7 +61,7 @@ const loadData = async () => {
 
     // UC Line chart
     g.append("path")
-        .attr("class", "uc-line")
+        .attr("class", "uc-line hidden-lines")
         .attr("fill", "none")
         .attr("stroke", "#000000")
         .attr("stroke-width", "1px")
@@ -78,8 +78,10 @@ const loadData = async () => {
 
 
     var imageElements = [];
+    const areaChartElement = svgRef.current;
 
 
+ 
     function updateValueLabel() {
         // Remove the previous "Value" label
         g.selectAll(".value-label").remove();
@@ -221,8 +223,7 @@ newData[newData.length - 1].value !== 0 &&
         // Update the data for both the area and line charts
 
         var newData = chartData.slice(0, currentIndex);
-        /*             x.domain([d3.min(newData, function(d) { return d.year; }),d3.max(newData, function(d) { return d.year; }) ] ); */
-        x.domain(d3.extent(data, function (d) { return d.year; }));
+         x.domain(d3.extent(data, function (d) { return d.year; }));
         y.domain([0, d3.max(data, function (d) { return d.value; })]);
         ucY.domain([0, d3.max(data, function (d) { return d.value; })]);
 
@@ -242,25 +243,28 @@ newData[newData.length - 1].value !== 0 &&
         updateValueLabel();
     }
 
-    // Add scroll event listener to the document
-    document.addEventListener("wheel", function (event) {
+
+
+
+    const handleScroll = (event) => {
         if (event.deltaY > 0) {
-            // Scroll down, advance one year
-            updateChart();
+          // Scroll down, advance one year
+          updateChart();
         } else if (event.deltaY < 0 && currentIndex > 0) {
-            backChart();
+          backChart();
         }
-    });
+        d3.selectAll(".line.hidden-lines").classed("hidden-lines", false);
+  d3.selectAll(".uc-line.hidden-lines").classed("hidden-lines", false);
+      };
+      
+      // Attach scroll event listener to the component's DOM element
+      areaChartElement.addEventListener("wheel", handleScroll);
+      
+      return () => {
+        // Remove the event listener when the component unmounts
+        areaChartElement.removeEventListener("wheel", handleScroll);
+      };
 
-    document.addEventListener("DOMMouseScroll", function (event) {
-        if (event.detail > 0) {
-            // Scroll down, advance one year
-            updateChart();
-        } else if (event.deltaY < 0 && currentIndex > 0) {
-            backChart();
-        }
-
-    });
 } catch (error) {
     console.error('Error loading/parsing data:', error);
   }
@@ -272,7 +276,7 @@ loadData();
 return (
     <div className="area-chart">
       <svg ref={svgRef} width={1300} height={600}>
-        {/* SVG content goes here */}
+        
       </svg>
     </div>
   );

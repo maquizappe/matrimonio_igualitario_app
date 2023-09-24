@@ -105,5 +105,7 @@ svg {
     font-family: 'Inter';
     
    }
-
+   .hidden-lines {
+    display: none;
+  }
 
