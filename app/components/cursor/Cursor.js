@@ -8,11 +8,6 @@ const Cursor = () => {
   const [cursor] = useContext(CursorContext);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Conditionally return null here if it's a touch device
-  if (isTouchDevice) {
-    return null;
-  }
-
   useEffect(() => {
     const handleMouseEnter = () => setIsVisible(true);
     const handleMouseLeave = () => setIsVisible(false);
@@ -24,6 +19,11 @@ const Cursor = () => {
       document.body.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
+
+  // Conditionally return null here if it's a touch device
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <div

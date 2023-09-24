@@ -4,9 +4,10 @@ import CursorContext from './CursorContext';
 const useCursorHandlers = (options = {}) => {
   const [, setCursor] = useContext(CursorContext);
 
-  const toggleCursor = () => {
+  // Define toggleCursor outside of useCallback
+  const toggleCursor = useCallback(() => {
     setCursor(({ active }) => ({ active: !active }));
-  };
+  }, [setCursor]);
 
   const onMouseEnter = useCallback(
     (event) => {
@@ -16,7 +17,7 @@ const useCursorHandlers = (options = {}) => {
 
       toggleCursor();
     },
-    [options] // Include options in the dependency array
+    [options, toggleCursor]
   );
 
   const onMouseLeave = useCallback(
@@ -27,7 +28,7 @@ const useCursorHandlers = (options = {}) => {
 
       toggleCursor();
     },
-    [options] // Include options in the dependency array
+    [options, toggleCursor]
   );
 
   return { onMouseEnter, onMouseLeave };
