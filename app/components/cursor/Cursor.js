@@ -10,16 +10,16 @@ const Cursor = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
-    document.body.addEventListener('mouseenter', handleMouseEnter);
-    document.body.addEventListener('mouseleave', handleMouseLeave);
+      const handleMouseEnter = () => setIsVisible(true);
+      const handleMouseLeave = () => setIsVisible(false);
+      document.body.addEventListener('mouseenter', handleMouseEnter);
+      document.body.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      document.body.removeEventListener('mouseenter', handleMouseEnter);
-      document.body.removeEventListener('mouseleave', handleMouseLeave);
-    };
-}
+      return () => {
+        document.body.removeEventListener('mouseenter', handleMouseEnter);
+        document.body.removeEventListener('mouseleave', handleMouseLeave);
+      };
+    }
   }, []);
 
   // Conditionally return null here if it's a touch device
