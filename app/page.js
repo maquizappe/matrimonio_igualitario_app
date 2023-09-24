@@ -4,7 +4,7 @@ import Cover from "./components/cover/cover";
 import Piechart from "./components/piechart/piechart";
 import AreaChart from "./components/ringschart/ringschart";
 import CursorContextProvider from './components/cursor/CursorContextProvider';
-/* import Cursor from './components/cursor/Cursor'; */
+ import Cursor from './components/cursor/Cursor'; 
 import "./page.css";
 
 export default function Home() {
@@ -18,7 +18,8 @@ export default function Home() {
 
       <div ref={areaChartRef}> <AreaChart/> </div>
     
-  {/*     <Cursor />        */}  
+      <Cursor />      
+
     </CursorContextProvider>
     </div>
   );
