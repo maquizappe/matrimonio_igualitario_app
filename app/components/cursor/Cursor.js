@@ -4,13 +4,14 @@ import useMousePosition from './useMousePosition';
 import { isTouchDevice } from './touchDeviceDetector';
 
 const Cursor = () => {
-  if (isTouchDevice) {
-    return null;
-  }
-
   const { clientX, clientY } = useMousePosition();
   const [cursor] = useContext(CursorContext);
   const [isVisible, setIsVisible] = useState(false);
+
+  // Conditionally return null here if it's a touch device
+  if (isTouchDevice) {
+    return null;
+  }
 
   useEffect(() => {
     const handleMouseEnter = () => setIsVisible(true);
@@ -57,12 +58,12 @@ const Cursor = () => {
       </svg>
       {cursor.active && (
         <img
-          src="./brides.png" // Use an absolute path to the image in the public folder
+          src="/brides.png" // Use an absolute path to the image in the public folder
           alt="Custom Cursor"
           style={{
             position: 'absolute',
             left: clientX,
-            top: clientY,          
+            top: clientY,
             height: "170px",
           }}
         />
