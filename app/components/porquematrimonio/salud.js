@@ -13,7 +13,7 @@ function Salud() {
                 </div>
             </div >
             <div className="imagen-derecha">
-                <img src="/salud.png" alt="adopcion" />
+                <img src="./salud.png" alt="adopcion" />
             </div>
             
         </div>

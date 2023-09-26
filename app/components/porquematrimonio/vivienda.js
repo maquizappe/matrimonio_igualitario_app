@@ -13,7 +13,7 @@ function Vivienda() {
                 </div>
             </div >
             <div className="casita">
-                <img src="/casita.png" alt="Casita" />
+                <img src="./casita.png" alt="Casita" />
             </div>
 
         </div>

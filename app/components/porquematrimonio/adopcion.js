@@ -13,7 +13,7 @@ function Adopcion() {
                 </div>
             </div >
             <div className="chupete">
-                <img src="/adopcion.png" alt="adopcion" />
+                <img src="./adopcion.png" alt="adopcion" />
             </div>
             
         </div>
