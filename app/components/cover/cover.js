@@ -6,8 +6,9 @@ function Cover() {
  const cursorHandlers = useCursorHandlers(); 
 
   return (
-    <div className="App"  {...cursorHandlers} >  
-      <div className="contentcover">
+    <div className="App"  {...cursorHandlers} > 
+      <div  className="Margintop">  </div> 
+      <div className="contentcover">      
         <div className="contentTile">
           <div className="title">Matrimonio</div>
           <div className="subtitle">Igualitario</div>
