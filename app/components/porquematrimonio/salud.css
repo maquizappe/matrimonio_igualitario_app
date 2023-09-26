@@ -1,0 +1,92 @@
+.saludComponent{
+    margin-top: -85px;
+    position: relative; /* Add this to make absolute positioning work */
+    z-index: 1;
+}
+
+.saludSubcomponentTitle {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+    transition: height 0.5s ease; 
+    position: relative;
+    z-index: 2;
+    height: 160px;
+
+}
+
+.saludComponentTitle:hover .saludSubcomponentTitle {
+    height: 240px; /* Change the height on hover */
+}
+
+.saludComponentTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px #C6C6C6 solid;
+    position: relative;
+    transition: height 0.5s ease; 
+    z-index: 3;
+
+}
+.saludComponent:hover .saludTitle {
+    align-items: center; /* Center align vivendaTitle on hover */
+margin-top: 20px;
+
+
+}
+
+
+.saludTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.saludCaption {
+    font-size: 20px;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease; /* Add smooth transition */
+    position: absolute; /* Position the caption absolutely */
+    bottom: 10px; /* Adjust the position as needed */
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; 
+    margin-bottom: 20px;
+   
+    z-index: 3;
+}
+
+.saludComponent:hover .saludCaption {
+    opacity: 1; /* Show the caption on hover */
+    align-items: center; 
+}
+
+.imagen-derecha {
+    margin-top: -190px;
+    margin-left: 780px; 
+        display: flex;
+        flex-direction:column;    
+        align-items: center; 
+        
+}
+
+.imagen-derecha img {
+    height: 290px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index:4; 
+}
+
+.saludComponent:hover .imagen-derecha img {
+    opacity: 0; /* Hide by default */
+
+
+}
