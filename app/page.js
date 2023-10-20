@@ -18,8 +18,14 @@ export default function Home() {
         <div>        <Cover />      </div>
 
         <div>        <Piechart />       </div>
-
-        <div ref={areaChartRef}> <AreaChart /> </div>
+        <div className="area-chart-wrapper"> 
+       
+        <div className="fixed-content" > 
+          <AreaChart />  
+ 
+        </div>
+        </div>
+       
         <div> <Vivienda /> </div>
         <div> <Adopcion /> </div>
         <div> <Salud /> </div>

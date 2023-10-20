@@ -1,5 +1,26 @@
 .content {
-    overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
-    max-height: 100vh; /* Limit the maximum height to the viewport height */
-    cursor: none;
-  }
+  overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+  max-height: 100vh; /* Limit the maximum height to the viewport height */
+  cursor: none;
+}
+
+
+.area-chart-wrapper{
+  position: relative;
+  width: 400px;
+  height: 3200px;
+  left: 50px;
+
+}
+
+
+.fixed-content {  
+  position: sticky;
+  top: 80px;
+  bottom: 1800px; 
+  
+ 
+}
+
+
+

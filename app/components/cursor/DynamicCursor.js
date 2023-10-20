@@ -56,4 +56,3 @@ const DynamicCursor = ({ clientX, clientY }) => {
 };
 
 export default DynamicCursor;
-

@@ -246,7 +246,6 @@ newData[newData.length - 1].value !== 0 &&
 
 
 
-
     const handleScroll = (event) => {
         if (event.deltaY > 0) {
           // Scroll down, advance one year
