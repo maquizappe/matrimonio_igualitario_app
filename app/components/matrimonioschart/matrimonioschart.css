@@ -1,0 +1,67 @@
+svg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.containerScrolling{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+
+}
+
+.textScrolling{
+    margin-top:10px;
+}
+
+.img{
+    width: 30px;
+}
+
+.containerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:50px;
+    margin-top: 50px;
+
+}
+
+.x-axis path.domain {
+    stroke: white;
+}
+
+ 
+g > .axis > path {
+    stroke: white; /* Change the color of the axis line to white */
+    
+}
+
+.axis text {
+    fill: black; 
+    font-family: 'Inter';
+}
+
+body{
+    font-family: 'Inter';
+  
+   }
+
+   #matrimonios-chart svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+ 
+  }
+  
+
+.matrimonios-chart{
+ 
+    margin-bottom: 50px;
+}
+
+.hidden-lines {
+    display: none;
+  }

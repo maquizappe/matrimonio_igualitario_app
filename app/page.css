@@ -17,10 +17,65 @@
 .fixed-content {  
   position: sticky;
   top: 80px;
-  bottom: 1800px; 
+  bottom: 0px; 
   
  
 }
 
+.fixed-comment{
+  position: sticky;
+  bottom: 20px; /* Adjust the desired position from the bottom */
+  width: 100%;
+  text-align: center;
+  background-color: white; /* Set a background color to ensure text is visible */
+  padding: 10px;
+  z-index: 1;
+}
+
+.matrimonios-chart-wrapper{
+  position: relative;
+  width: 1400px;
+  height: 2000px;
+  margin-top: 100px;
+
+}
 
 
+.matrimonios-content {  
+  position: sticky;
+  top: 80px;
+  bottom: 0px; 
+  margin-left: 500px;
+ 
+}
+
+.matrimonios-title{
+  display: flex;
+  justify-content: flex-end;
+ 
+margin-right: 50px;
+  
+ 
+}
+
+.matrimonios-subtitle{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px; 
+  margin-top:2px;
+  margin-bottom: 30px;
+  margin-right: 50px;
+
+}
+
+.matrimonios-caption{
+  position: sticky;
+  top: 550px;
+  bottom: 0px; 
+  font-size: 12px; 
+  width: 210px;
+  text-align: right;
+  margin-left: 230px;
+  line-height: 23px;
+ 
+}
