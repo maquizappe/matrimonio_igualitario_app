@@ -29,7 +29,7 @@ export default function Home() {
         <div> <Adopcion /> </div>
         <div> <Salud /> </div>
          <div className="matrimonios-chart-wrapper">
-          <div className="matrimonios-caption">En 2010, con la Ley de Matrimonio Igualitario, 786 parejas LGBTQ+ dieron el "sí", marcando un descenso en las uniones convivenciales </div>
+          <div className="matrimonios-caption">En 2010, con la Ley de Matrimonio Igualitario, 786 parejas LGBTQ+ dieron el sí, marcando un descenso en las uniones convivenciales </div>
           <div className="matrimonios-content" >
           <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
         <div className="matrimonios-subtitle"> su evolución histórica en la Ciudad de Buenos Aires </div>
