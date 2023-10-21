@@ -17,6 +17,7 @@ export default function Home() {
   return (
     <div className="content">
       <CursorContextProvider>
+    
         <div>        <Cover />      </div>
 
         <div>        <Piechart />       </div>

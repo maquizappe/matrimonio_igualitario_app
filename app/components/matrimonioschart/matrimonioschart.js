@@ -66,10 +66,10 @@ const Matirmonioschart = () => {
 
                     // UC Line chart
                     g.append("path")
-                        .attr("class", "uc-line hidden-lines")
+                        .attr("class", "uc-line hidden-lines")                        
                         .attr("fill", "none")
-                        .attr("stroke", "rgba(0,0,0,0.3)")
-                        .attr("stroke-width", "1px")                        
+                        .attr("stroke", "rgba(0,0,0,0)")
+                        .attr("stroke-width", "1px")
                         .attr("d", ucLine(data))
 
 
@@ -138,8 +138,10 @@ const Matirmonioschart = () => {
                         if (currentIndex >= chartData.length) {
                             currentIndex = chartData.length - 1;
                         }
-                        d3.selectAll(".line, .uc-line")
-                            .style("display", "block");
+
+                        d3.selectAll(".line.hidden-lines").classed("hidden-lines", false);
+                        d3.selectAll(".uc-line.hidden-lines").classed("hidden-lines", false);
+
 
                         var initialYear = parseTime("2010");
                         var yearsToDisplay = currentIndex + 1;
@@ -161,12 +163,19 @@ const Matirmonioschart = () => {
                         ) {
 
                             g.select(".line")
-                                .datum(newData)
-                                .attr("d", line)
+                            .style("display", "block")                            
+                            .datum(newData)
+                            .attr("d", line);
+                      
+                          g.select(".uc-line")
+                            .style("display", "block")
+                            .attr("stroke", "rgba(0,0,0,0.3)")
+                            .datum(newData)
+                            .attr("d", ucLine);
                         } else {
                             // If the condition is not met, hide the area and line
 
-                            g.select(".line").style("display", "none");
+                            g.select(".line , .uc-line").style("display", "none");
                         }
 
                         // UC Line chart
@@ -176,6 +185,7 @@ const Matirmonioschart = () => {
 
 
                         updateValueLabel();
+
 
                     }
 
@@ -206,8 +216,8 @@ const Matirmonioschart = () => {
                         g.select(".uc-line")
                             .datum(newData)
                             .attr("d", ucLine);
-                        
-                            g.selectAll(".value-image").remove();
+
+                        g.selectAll(".value-image").remove();
 
                         updateValueLabel();
                     }

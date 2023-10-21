@@ -29,6 +29,18 @@ svg {
 
 }
 
+#matrimonios-chart svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+ 
+  }
+  
+
+.matrimonios-chart{
+ 
+    margin-bottom: 50px;
+}
 .x-axis path.domain {
     stroke: white;
 }
@@ -49,19 +61,25 @@ body{
   
    }
 
-   #matrimonios-chart svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
- 
-  }
-  
 
-.matrimonios-chart{
+
  
-    margin-bottom: 50px;
+.uc-line{
+  display: none; /* Hide the lines by default */
 }
 
-.hidden-lines {
+.line {
+    display: none; /* Hide the lines by default */
+  }
+
+  .hidden-lines {
+    display: none;
+  }
+
+  .line.hidden-lines{
+    display: none;
+  }
+
+  .uc-line.hidden-lines{
     display: none;
   }
