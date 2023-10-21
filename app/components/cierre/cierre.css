@@ -1,0 +1,44 @@
+.cierre-title {
+    display: flex;
+    margin-right: 50px;
+    margin-top: 200px;
+    margin-left: 75px;
+    font-size: 45px;
+}
+
+.cierre-caption {
+    font-size: 12px;
+    width: 500px;
+    line-height: 23px;
+    margin-top: 20px;
+    margin-left: 80px;
+
+}
+
+.cierre-imagen-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+
+
+.cierre-imagen-1 img {
+    width: 200px;
+}
+
+.cierre-imagen-2 img {
+    width: 270px;
+}
+
+.cierre-imagen-3 img {
+    width: 340px;
+}
+
+.cierre-imagen-4 img {
+    width: 410px;
+}
