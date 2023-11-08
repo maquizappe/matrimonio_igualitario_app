@@ -224,6 +224,7 @@ const Matirmonioschart = () => {
 
 
                     const handleScroll = (event) => {
+                        
                         if (event.deltaY > 0) {
                             // Scroll down, advance one year
                             updateChart();

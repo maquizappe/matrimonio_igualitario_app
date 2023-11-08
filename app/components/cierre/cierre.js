@@ -101,7 +101,7 @@ function Cierre() {
                /*  initial={inView ? 'hidden' : 'hidden'} // Change to 'hidden' to start hidden
                 animate={inView ? 'visible' : 'hidden'} // Change to 'hidden' to start hidden
                 variants={textVariants} */
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </motion.div>
+            >Es evidente que una sociedad más igualitaria es beneficios para todos/as. Es importante proteger los derechos conquistarlos, y cuestionarlos solo para ampliarlos y mejorarlos. </motion.div>
 
             <div className="cierre-imagen-component">
                 <motion.div className="cierre-imagen-1" initial={inView ? "visible" : "hidden"} animate={inView ? "visible" : "hidden"} variants={imageVariants}>

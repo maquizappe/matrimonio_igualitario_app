@@ -42,7 +42,7 @@ function Piechart() {
         </div>
       </div>
 
-      <div  className="text"> Argentina fue el primer país en América Latina en legalizar el matrimonio LGBTQ+ en 2010, 
+      <div  className="text"> Según datos de la Ciudad de Buenos Aires, desde 2010 el número de casamientos LGBTIQ+ por año se ha casi triplicado.
 </div>
 
 

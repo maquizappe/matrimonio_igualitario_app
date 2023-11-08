@@ -13,7 +13,7 @@ function Cover() {
           <div className="title">Matrimonio</div>
           <div className="subtitle">Igualitario</div>
           <div className="caption">
-            Argentina fue el primer país en América Latina en legalizar el matrimonio LGBTQ+ en 2010, siendo el décimo país en el mundo.
+          En un contexto en el que se cuestiona la importancia de ciertos derechos adquiridos, ofrecemos una analisis sobre la evolución e impacto del matrimonio igualitario. Una conquista pionera a nivel latinoamericano y de vanguarida mundial.
           </div>
         </div>
       </div>
