@@ -18,7 +18,7 @@ function Piechart() {
             <div className="dot">  </div>
             <div className='year'>2010</div>
             <div className='value'>786</div>
-            <div className="line"> </div>
+            <div className="line1"> </div>
           </div>
 
           <div className='groupline2'>

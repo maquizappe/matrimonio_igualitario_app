@@ -41,8 +41,8 @@
 }
 
 
-.line {
-  border-top:1.7px dashed #3E3E3E;
+.line1 {
+border-top:1.7px dashed #3E3E3E;
 height: 93px;
 margin-top:-67px;
 width: 400px;
@@ -117,8 +117,8 @@ width: 370px;
 
 .text{
   font-size: 12px;
- margin-top: 460px;
-  width: 150px;
+ margin-top: 489px;
+  width: 200px;
   margin-left: 205px;
   line-height: 23px;
 }
