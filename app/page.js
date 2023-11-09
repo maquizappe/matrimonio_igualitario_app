@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import Cover from "./components/cover/cover";
 import Piechart from "./components/piechart/piechart";
 import AreaChart from "./components/ringschart/ringschart";
@@ -11,9 +11,33 @@ import Salud from './components/porquematrimonio/salud';
 import Matirmonioschart from './components/matrimonioschart/matrimonioschart';
 import Cierre from './components/cierre/cierre'
 import "./page.css";
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 
 export default function Home() {
   const areaChartRef = useRef(null);
+  const matrimonio = useRef();
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    matrimonio.current = gsap.timeline();
+
+    matrimonio.current
+        .fromTo(".matrimonios-caption", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.8, ease: "power1.inOut", delay:2})
+
+    ScrollTrigger.create({
+        trigger: ".matrimonios-chart-wrapper",      
+        start: "top bottom", 
+        end: "bottom top", 
+        animation: matrimonio.current, 
+        toggleActions: "play none none none", 
+    });
+
+
+  }, []);
+
   return (
     <div className="content">
       <CursorContextProvider>

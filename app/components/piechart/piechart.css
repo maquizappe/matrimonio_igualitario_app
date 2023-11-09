@@ -1,7 +1,11 @@
+
+.piecomponent{
+  margin-top: 100px;
+
+}
 .Piesection{
   display: flex;
   flex-direction:row;
-  margin-top: 100px;
 
 }
 .pie {
@@ -72,7 +76,8 @@ width: 370px;
 
 
 
-.dot {
+
+.dot_1 {
   height: 8px;
   width: 8px;
   background-color: #3E3E3E;
@@ -80,7 +85,50 @@ width: 370px;
   display: inline-block;
 }
 
-.year{
+.dot_2 {
+  height: 8px;
+  width: 8px;
+  background-color: #3E3E3E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot_3 {
+  height: 8px;
+  width: 8px;
+  background-color: #3E3E3E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot_4 {
+  height: 8px;
+  width: 8px;
+  background-color: #3E3E3E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.year_1{
+
+  font-size: 13px;
+  margin-left: 18px;
+}
+
+.year_2{
+
+  font-size: 13px;
+  margin-left: 18px;
+}
+
+.year_3{
+
+  font-size: 13px;
+  margin-left: 18px;
+}
+
+.year_4{
 
   font-size: 13px;
   margin-left: 18px;
@@ -133,3 +181,24 @@ width: 370px;
   background-color: #3E3E3E;
 }
 
+.cerezas{
+  display: flex;
+  flex-direction:row;
+}
+
+.cereza_2{
+  transform: scaleX(-1);
+}
+
+.cereza_7{
+  transform: scaleX(-1);
+}
+
+.cereza_6{
+  transform: scaleX(-1);
+}
+
+
+.cereza_8{
+  transform: scaleX(-1);
+}

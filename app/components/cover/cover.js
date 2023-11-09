@@ -17,6 +17,7 @@ function Cover() {
           </div>
         </div>
       </div>
+      <div className="whiteSpace"> </div>
         </div>
   );
 }
