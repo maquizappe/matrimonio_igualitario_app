@@ -1,6 +1,6 @@
 
 .piecomponent{
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
 .Piesection{
@@ -184,21 +184,52 @@ width: 370px;
 .cerezas{
   display: flex;
   flex-direction:row;
+
+}
+
+.cereza_1{
+  opacity: 0;
 }
 
 .cereza_2{
   transform: scaleX(-1);
+  opacity: 0;
 }
 
-.cereza_7{
-  transform: scaleX(-1);
+.cereza_3{
+  opacity: 0;
+}
+
+.cereza_4{
+  opacity: 0;
+}
+
+.cereza_5{
+  opacity: 0;
 }
 
 .cereza_6{
   transform: scaleX(-1);
+  opacity: 0;
+}
+
+.cereza_7{
+  transform: scaleX(-1);
+  opacity: 0;
 }
 
 
 .cereza_8{
   transform: scaleX(-1);
+  opacity: 0;
+}
+
+
+.cereza_9{
+  opacity: 0;
+  
+}
+
+.referenceSection{
+  opacity:0
 }

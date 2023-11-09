@@ -1,77 +1,79 @@
 import './piechart.css';
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+
 
 function Piechart() {
   const tl = useRef();
-  const tl_lines = useRef();
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    tl.current = gsap.timeline();
-
-    tl.current
-        .fromTo(".cereza_1", { y: -10, x:190, opacity: 0 }, { y: 310, opacity: 1, duration: 1, ease: "power1.inOut" , delay:3})
-        .fromTo(".cereza_2", { y: -10, x:200, opacity: 0 }, { y: 200, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
-        .fromTo(".cereza_3", { y: -10, x:260, opacity: 0 }, { y: 95, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
-        .fromTo(".cereza_4", { y: -10, x:250, opacity: 0 }, { y: 500, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
-        .fromTo(".cereza_5", { y: 0, x:200, opacity: 0 }, { y: 210, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
-         .fromTo(".cereza_6", { y: 0, x:10, opacity: 0 }, { y: 490, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
-        .fromTo(".cereza_7", { y: 0, x:50, opacity: 0 }, { y: 340, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
-         .fromTo(".cereza_9", { y: 0, x:100, opacity: 0 }, { y: 310, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
-         .fromTo(".cereza_8", { y: 0, x:-15, opacity: 0 }, { y: 95, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
-      
-   const triggerElement = document.querySelector(".pie");
-  if (!triggerElement) {
-    console.error("Trigger element not found!");
-    return;
-  }
-
-    ScrollTrigger.create({
-        trigger: "triggerElement",      
-        start: "top bottom", 
-        end: "bottom top", 
-        animation: tl.current, 
-        toggleActions: "play none none none", 
-    });
-
-    tl_lines.current = gsap.timeline();
-    tl_lines.current
-    .fromTo(".dot_1", { opacity:0}, { opacity:1,  duration: 0.2, delay:5 })
-    .fromTo(".dot_2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=0.15") 
-    .fromTo(".dot_3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=0.15") 
-    .fromTo(".dot_4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=0.15")
-
-    .fromTo(".line1", { width: 0, x: 0 }, { width: 400, duration: 1, ease: "power1.inOut" }, "-=0.2") // Stagger the start of line1 by 0.2 seconds
-    .fromTo(".line2", { width: 0, x: 0 }, { width: 375, duration: 1, ease: "power1.inOut" }, "-=1") // Stagger the start of line2 by 0.2 seconds
-    .fromTo(".line3", { width: 0, x: 0 }, { width: 380, duration: 1, ease: "power1.inOut" }, "-=1") // Stagger the start of line3 by 0.2 seconds
-    .fromTo(".line4", { width: 0, x: 0 }, { width: 370, duration: 1, ease: "power1.inOut" }, "-=1") // Stagger the start of line4 by 0.2 seconds
-  
-    .fromTo(".year_1, .year_2, .year_3, .year_4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=0.15") // Stagger the start of years by 0.15
-       
-    .fromTo(".value", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"})
-    .fromTo(".value2", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=0.2")
-    .fromTo(".value3", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=0.2")
-    .fromTo(".value4", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=0.2")
-
-    .fromTo(".text", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.8, ease: "power1.inOut"})
-
-        ScrollTrigger.create({
-            trigger: "triggerElement",          
-            start: "top bottom", 
-            end: "bottom top", 
-            animation:  tl_lines.current, 
-            toggleActions: "play none none none", 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCereza();
+            animateLineas();
+            observer.unobserve(entry.target);
+          }
         });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
 
+    if (tl.current) {
+      observer.observe(tl.current);
+    }
 
-
+    return () => {
+      if (tl.current) {
+        observer.unobserve(tl.current);
+      }
+    }
+    
   }, []);
 
+  const animateCereza = () => {
+gsap.fromTo(".referenceSection", { opacity: 0 },  { opacity: 1})
+    gsap.fromTo(".cereza_1", { y: -10, x:190, opacity: 0 }, { y: 310, opacity: 1, duration: 1, ease: "power1.inOut" })
+    gsap.fromTo(".cereza_2", { y: -10, x:200, opacity: 0 }, { y: 200, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
+    gsap.fromTo(".cereza_3", { y: -10, x:260, opacity: 0 }, { y: 95, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
+    gsap.fromTo(".cereza_4", { y: -10, x:250, opacity: 0 }, { y: 500, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
+    gsap.fromTo(".cereza_5", { y: 0, x:200, opacity: 0 }, { y: 210, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
+    gsap.fromTo(".cereza_6", { y: 0, x:10, opacity: 0 }, { y: 490, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.2")
+    gsap.fromTo(".cereza_7", { y: 0, x:50, opacity: 0 }, { y: 340, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
+    gsap.fromTo(".cereza_9", { y: 0, x:100, opacity: 0 }, { y: 310, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
+    gsap.fromTo(".cereza_8", { y: 0, x:-15, opacity: 0 }, { y: 95, opacity: 1, duration: 0.8, ease: "power1.inOut" }, "-=0.1")
+      
+  
+  }
+  const animateLineas = () => { 
+    gsap.fromTo(".dot_1", { opacity:0}, { opacity:1,  duration: 0.2 }, "-=4")
+    gsap.fromTo(".dot_2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=4.15") 
+    gsap.fromTo(".dot_3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=4.15") 
+    gsap.fromTo(".dot_4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=4.15")
+
+    gsap.fromTo(".line1", { width: 0, x: 0 }, { width: 400, duration: 1, ease: "power1.inOut" }, "-=4.2") 
+    gsap.fromTo(".line2", { width: 0, x: 0 }, { width: 375, duration: 1, ease: "power1.inOut" }, "-=4.1") 
+    gsap.fromTo(".line3", { width: 0, x: 0 }, { width: 380, duration: 1, ease: "power1.inOut" }, "-=4.1") 
+    gsap.fromTo(".line4", { width: 0, x: 0 }, { width: 370, duration: 1, ease: "power1.inOut" }, "-=4.1") 
+  
+    gsap.fromTo(".year_1, .year_2, .year_3, .year_4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "-=3.8") 
+       
+    gsap.fromTo(".value", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=3.0")
+    gsap.fromTo(".value2", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=2.5")
+    gsap.fromTo(".value3", { opacity:0, y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=2")
+    gsap.fromTo(".value4", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.7, ease: "power1.inOut"}, "-=1.5")
+
+    gsap.fromTo(".text", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.8, ease: "power1.inOut"}, "-=1")
+
+        
+
+
+
+  };
+
   return (
-    <div className="piecomponent"> 
+    <div className="piecomponent" ref={tl}> 
     <div className='cerezas'>
         <div className='cereza_1'>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="71" viewBox="0 0 54 85" fill="none">
@@ -226,13 +228,15 @@ function Piechart() {
         </div>
 
 
+
         </div>
-    <div className="Piesection">
+  
+    <div className="Piesection" >
 
 
 
 
-      <div className="pie">
+      <div className="pie" >
      
         <img src="./pie.png" alt="pie" />
        

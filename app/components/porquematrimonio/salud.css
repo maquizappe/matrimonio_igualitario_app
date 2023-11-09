@@ -86,7 +86,8 @@ margin-top: 20px;
 }
 
 .saludComponent:hover .imagen-derecha img {
+    height: 240px;
     opacity: 0; /* Hide by default */
-
+   
 
 }
