@@ -48,15 +48,15 @@ function Cierre() {
     return (
         <div className="cierreComponent ">
 
-            <motion.div
+            <div
                 className="cierre-title"
             
             >
                 Vamos por más derechos
-            </motion.div>
-            <motion.div className="cierre-caption"
+            </div>
+            <div className="cierre-caption"
             
-            >Es evidente que una sociedad más igualitaria es beneficios para todos/as. Es importante proteger los derechos conquistarlos, y cuestionarlos solo para ampliarlos y mejorarlos. </motion.div>
+            >Es evidente que una sociedad más igualitaria es beneficios para todos/as. Es importante proteger los derechos conquistarlos, y cuestionarlos solo para ampliarlos y mejorarlos. </div>
 
             <div className="cierre-imagen-component"  ref={cierre_tl}>
                 <div className="cierre-imagen-1" >
