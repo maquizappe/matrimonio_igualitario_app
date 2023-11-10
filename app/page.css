@@ -7,7 +7,6 @@
 
 .area-chart-wrapper{
   position: relative;
-
   height: 1000px;
 
 
@@ -16,8 +15,9 @@
 
 .fixed-content {  
   position: sticky;
-  top: 80px;
-  bottom: 0px;  
+  top: 20px;
+  bottom: 30px;  
+
 }
 
 .area-title{
@@ -50,6 +50,7 @@ opacity: 0;
 }
 .areachart{
   margin-left: 10px;
+  
 }
 
 

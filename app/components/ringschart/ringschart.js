@@ -276,7 +276,7 @@ loadData();
 }, []);
 return (
     <div className="area-chart">
-      <svg ref={svgRef} width={1300} height={600}>
+      <svg ref={svgRef} width={1200} height={530}>
         
       </svg>
     </div>
