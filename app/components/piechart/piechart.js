@@ -277,7 +277,6 @@ gsap.fromTo(".referenceSection", { opacity: 0 },  { opacity: 1})
       <div className="text"> Según datos de la Ciudad de Buenos Aires, desde 2010 el número de casamientos LGBTIQ+ por año se ha casi triplicado.
       </div>
 
-    
 
     </div>
 

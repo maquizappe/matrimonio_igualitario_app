@@ -1,4 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Rubik&family=VT323&display=swap');
+
+@media (max-width:500px)  { 
+
+  .App{
+    transform: scale(0.4);
+  }
+
+body {
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+ /*  cursor: none; */
+ margin: 0;
+}
+
+.contentcover {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+ }
+
+.Margintop{
+  height: 150px;
+  width: 10px;
+
+}
+
+.title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.caption {
+  text-align: left;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 35px;
+  /* 150% */
+  margin-top: 10px;
+  width: 300px;
+  height: 230px;
+  margin-left: 325px;
+}
+
+.subtitle {
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+  
+
+}
+
+@media (min-width:501px)  { 
+
+  .App{
+    transform: scale(1);
+  }
+
 body {
   overflow: hidden;
   font-family: 'Inter', sans-serif;
@@ -48,3 +110,4 @@ body {
 
 
 
+}

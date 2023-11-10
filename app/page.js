@@ -87,9 +87,9 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
         <div>        <Piechart />       </div>
         <div className="area-chart-wrapper" ref={areaChartRef}>
           <div className="fixed-content" >
-          <div className="area-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
+          <div className="area-caption">Las personas LGTBQ+ prefieren el matrimonio a la unión convivencial. En el año de la sanción de la Ley, la mayoría de los contrayentes tenían más de 50 años, logrando después de toda una vida ejercer este derecho. </div>
       
-                    <div className="area-title"> De la unión convivencial al matrimonio igualitario </div>
+            <div className="area-title"> De la unión convivencial al matrimonio igualitario </div>
             <div className="area-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
           <div className="areachart"> 
            <AreaChart />
@@ -97,12 +97,16 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
             
           </div>
         </div>
+
+        <div className="component-matrimonio"> 
         <div className="porque-matrimonio"> ¿Por qué se elige el matrimonio? </div>
             <div className="porque-matrimonio-subtitle"> Beneficios frente a las uniones convivenciales </div>
            
         <div> <Vivienda /> </div>
         <div> <Adopcion /> </div>
         <div> <Salud /> </div>
+        </div>
+
         <div className="matrimonios-chart-wrapper" ref={matrimonio}>
           <div className="matrimonios-content" >
           <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>

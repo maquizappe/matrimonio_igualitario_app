@@ -1,3 +1,8 @@
+@media (max-width: 500px) {
+
+
+}
+
 .content {
   overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
   max-height: 100vh; /* Limit the maximum height to the viewport height */
@@ -45,7 +50,7 @@
   width: 210px;
   text-align: right;
   margin-left: 230px;
-  line-height: 23px;
+  line-height: 20px;
 opacity: 0; 
 }
 .areachart{
@@ -125,7 +130,7 @@ margin-right: 50px;
   width: 210px;
   text-align: right;
   margin-left: -230px;
-  line-height: 23px;
+  line-height: 20px;
   opacity:0;
  
 }
