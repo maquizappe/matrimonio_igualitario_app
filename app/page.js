@@ -94,7 +94,7 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
           <div className="areachart"> 
            <AreaChart />
             </div>
-            
+            <div className='fake-areachart'>    <img src="./ring_chart_image.png" alt="ring" /> </div>
           </div>
         </div>
 
