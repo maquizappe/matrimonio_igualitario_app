@@ -1,7 +1,11 @@
+
+@media (max-width: 500px) {
+
 .vivendaComponent {
     margin-top: 200px;
     position: relative; /* Add this to make absolute positioning work */
     z-index: 1;
+    transform: scale(0.40);
 }
 
 .vivendaSubcomponentTitle {
@@ -12,9 +16,13 @@
     flex-direction: column;
     border-bottom: 1px #C6C6C6 solid;
     height: 150px;
+ 
     transition: height 0.5s ease; 
     position: relative;
     z-index: 2;
+
+    width:250%;
+    margin-left:-240px;
 }
 
 .vivendaComponent:hover .vivendaSubcomponentTitle {
@@ -69,8 +77,8 @@ margin-bottom: -40px;
 }
 
 .casita {
-    margin-top: -185px;
-    margin-left: 920px;
+    margin-top: -155px;
+    margin-left:140%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +87,7 @@ margin-bottom: -40px;
 }
 
 .casita img {
-    height: 220px;
+    height: 170px;
    
     opacity: 1;
     transition: opacity 0.2s ease;
@@ -92,3 +100,110 @@ margin-bottom: -40px;
 
 
 }
+
+}
+
+
+
+@media (min-width: 501px) {
+
+    .vivendaComponent {
+        margin-top: 200px;
+        position: relative; /* Add this to make absolute positioning work */
+        z-index: 1;
+        transform: scale(1);
+    }
+    
+    .vivendaSubcomponentTitle {
+        border-top: 1px #C6C6C6 solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: 1px #C6C6C6 solid;
+        height: 150px;
+        transition: height 0.5s ease; 
+        position: relative;
+        z-index: 2;
+
+        width:100%;
+        margin-left:0px;
+    }
+    
+    .vivendaComponent:hover .vivendaSubcomponentTitle {
+        height: 240px; /* Change the height on hover */
+    }
+    
+    .vivendaComponentTitle {
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-align: center;
+        position: relative;
+        transition: height 0.5s ease; 
+        z-index: 3;
+    }
+    
+    .vivendaComponent:hover .vivendaTitle {
+        align-items: center; /* Center align vivendaTitle on hover */
+    margin-top: -80px;
+    margin-bottom: -40px;
+    
+    }
+    
+    .vivendaTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .viviendaCaption {
+        font-size: 20px;
+        opacity: 0; /* Hide by default */
+        transition: opacity 0.3s ease; /* Add smooth transition */
+        position: absolute; /* Position the caption absolutely */
+        bottom: 10px; /* Adjust the position as needed */
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px; /* Add padding for better spacing */
+        border-radius: 5px; 
+        margin-bottom: 20px;
+        margin-top: -50px;
+        z-index: 3;
+    }
+    
+    .vivendaComponent:hover .viviendaCaption {
+        opacity: 1; /* Show the caption on hover */
+        align-items: center; 
+    
+    }
+    
+    .casita {
+        margin-top: -185px;
+        margin-left: 920px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative; 
+        z-index:4;
+    }
+    
+    .casita img {
+        height: 220px;
+       
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        position: relative; 
+    }
+    
+    
+    .vivendaComponent:hover .casita img {
+        opacity: 0; /* Hide by default */
+    
+    
+    }
+    
+    }

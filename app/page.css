@@ -1,8 +1,156 @@
+
+
 @media (max-width: 500px) {
+  .component-matrimonio{
+    transform: scale(1);
+  }
+  .content {
+    overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+    max-height: 100vh; /* Limit the maximum height to the viewport height */
+    cursor: none;
+  }
+  
+  
+  .area-chart-wrapper{
+    position: relative;
+    height: 1000px;
+  
+  
+  }
+  
+  
+  .fixed-content {  
+    position: sticky;
+    top: 20px;
+    bottom: 30px;  
+  
+  }
+  
+  .area-title{
+    display: flex;
+    justify-content: flex-end; 
+    margin-right: 92px;
+    
+   
+  }
+  
+  .area-subtitle{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px; 
+    margin-top:2px;
+    margin-bottom: 30px;
+    margin-right: 92px;
+  
+  }
+  
+  .area-caption{
+    position: sticky;
+    top: 1150px;
+    bottom: 0px; 
+    font-size: 12px; 
+    width: 210px;
+    text-align: right;
+    margin-left: 230px;
+    line-height: 20px;
+  opacity: 0; 
+  }
+  .areachart{
+    margin-left: 10px;
+    
+  }
+  
+  
+  
+  .fixed-comment{
+    position: sticky;
+    bottom: 20px; /* Adjust the desired position from the bottom */
+    width: 100%;
+    text-align: center;
+    background-color: white; /* Set a background color to ensure text is visible */
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .matrimonios-chart-wrapper{
+    position: relative;
+    width: 1400px;
+    height: 900px;
+    margin-top: 100px;
+  
+  }
+  
+  
+  .matrimonios-content {  
+    position: sticky;
+    top: 80px;
+    bottom: 0px; 
+    margin-left: 500px;
+   
+  }
+  
+  .porque-matrimonio{
+    display: flex;
+    justify-content: flex-start; 
+  margin-left: 30px; 
+  margin-top:120px;
 
-
+  font-size: 12px; 
+  
+  }
+  
+  .porque-matrimonio-subtitle{
+    display: flex;
+    justify-content: flex-start; 
+    font-size: 8px; 
+    margin-top:4px;
+    margin-bottom: -220px;
+    margin-left: 30px;
+  }
+  
+  .matrimonios-title{
+    display: flex;
+    justify-content: flex-end; 
+  margin-right: 50px;  
+   
+  }
+  
+  .matrimonios-subtitle{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px; 
+    margin-top:2px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+  
+  }
+  
+  
+  
+  .matrimonios-caption{
+    position: sticky;
+    top: 1150px;
+    bottom: 0px; 
+    font-size: 12px; 
+    width: 210px;
+    text-align: right;
+    margin-left: -230px;
+    line-height: 20px;
+    opacity:0;
+   
+  }
+  
+  
+  
 }
 
+
+@media (min-width: 501px) {
+
+
+.component-matrimonio{
+  transform: scale(1);
+}
 .content {
   overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
   max-height: 100vh; /* Limit the maximum height to the viewport height */
@@ -92,6 +240,7 @@ opacity: 0;
   justify-content: flex-start; 
 margin-left: 30px; 
 margin-top:120px;
+font-size: 18px; 
 }
 
 .porque-matrimonio-subtitle{
@@ -134,4 +283,4 @@ margin-right: 50px;
   opacity:0;
  
 }
-
+}
