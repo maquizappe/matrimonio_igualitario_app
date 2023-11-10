@@ -42,3 +42,6 @@
 .cierre-imagen-4 img {
     width: 410px;
 }
+.cierreComponent{
+    opacity: 0;
+}
