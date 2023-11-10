@@ -112,7 +112,8 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
           <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
                    <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
             <div className="matrimonios-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
-            <div> <Matirmonioschart /> </div>
+            <div className="matrimonio-chart"> <Matirmonioschart /> </div>
+            <div className='fake-areachart'>    <img src="./gais_chart.png" alt="ring" /> </div>
           </div>
         </div>
 

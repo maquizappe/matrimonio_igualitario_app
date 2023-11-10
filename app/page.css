@@ -94,21 +94,23 @@
   
   .matrimonios-chart-wrapper{
     position: relative;
-    width: 1400px;
-    height: 900px;
-    margin-top: 100px;
+  
+    margin-top: 0px;
   
   }
   
   
   .matrimonios-content {  
-    position: sticky;
-    top: 80px;
+   
     bottom: 0px; 
-    margin-left: 500px;
+ 
    
   }
   
+.matrimonio-chart{
+  display:none;
+}
+
   .porque-matrimonio{
     display: flex;
     justify-content: flex-start; 
@@ -132,13 +134,14 @@
     display: flex;
     justify-content: flex-end; 
   margin-right: 50px;  
+  font-size: 12px;
    
   }
   
   .matrimonios-subtitle{
     display: flex;
     justify-content: flex-end;
-    font-size: 12px; 
+    font-size: 8px; 
     margin-top:2px;
     margin-bottom: 30px;
     margin-right: 50px;
@@ -166,6 +169,11 @@
 
 
 @media (min-width: 501px) {
+
+  .matrimonio-chart{
+    display:block;
+  }
+  
 
 .fake-areachart{
   display: none
@@ -281,6 +289,7 @@ font-size: 18px;
   display: flex;
   justify-content: flex-end; 
 margin-right: 50px;  
+font-size: 16px;
  
 }
 
