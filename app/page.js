@@ -46,8 +46,37 @@ export default function Home() {
   }, []);
 
   const matrimonioAnimation = () => {
- gsap.fromTo(".matrimonios-caption", { opacity:0,y: 20}, { opacity:1, y:0,  duration:0.8, ease: "power1.inOut", delay:1})
+ gsap.fromTo(".matrimonios-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duration:1, ease: "power1.inOut", delay:1})
   }
+
+
+  useEffect(() => {    const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          areaAnimation();
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 } // Adjust the threshold as needed
+  );
+
+  if (areaChartRef.current) {
+    observer.observe(areaChartRef.current);
+  }
+
+  return () => {
+    if (tl.current) {
+      observer.unobserve(areaChartRef.current);
+    }
+  }
+  
+}, []);
+
+const areaAnimation = () => {
+gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duration:1, ease: "power1.inOut", delay:3})
+}
 
   return (
     <div className="content">
@@ -56,9 +85,16 @@ export default function Home() {
         <div>        <Cover />      </div>
 
         <div>        <Piechart />       </div>
-        <div className="area-chart-wrapper">
+        <div className="area-chart-wrapper" ref={areaChartRef}>
           <div className="fixed-content" >
-            <AreaChart />
+          <div className="area-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
+      
+                    <div className="area-title"> De la unión convivencial al matrimonio igualitario </div>
+            <div className="area-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
+          <div className="areachart"> 
+           <AreaChart />
+            </div>
+            
           </div>
         </div>
         <div className="porque-matrimonio"> ¿Por qué se elige el matrimonio? </div>
@@ -68,10 +104,10 @@ export default function Home() {
         <div> <Adopcion /> </div>
         <div> <Salud /> </div>
         <div className="matrimonios-chart-wrapper" ref={matrimonio}>
-          <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
           <div className="matrimonios-content" >
-            <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
-            <div className="matrimonios-subtitle"> su evolución histórica en la Ciudad de Buenos Aires </div>
+          <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
+                   <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
+            <div className="matrimonios-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
             <div> <Matirmonioschart /> </div>
           </div>
         </div>

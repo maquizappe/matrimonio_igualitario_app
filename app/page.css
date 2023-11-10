@@ -7,9 +7,9 @@
 
 .area-chart-wrapper{
   position: relative;
-  width: 400px;
+
   height: 1000px;
-  left: 50px;
+
 
 }
 
@@ -17,10 +17,42 @@
 .fixed-content {  
   position: sticky;
   top: 80px;
-  bottom: 0px; 
-  
+  bottom: 0px;  
+}
+
+.area-title{
+  display: flex;
+  justify-content: flex-end; 
+  margin-right: 92px;
  
 }
+
+.area-subtitle{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px; 
+  margin-top:2px;
+  margin-bottom: 30px;
+  margin-right: 92px;
+
+}
+
+.area-caption{
+  position: sticky;
+  top: 1150px;
+  bottom: 0px; 
+  font-size: 12px; 
+  width: 210px;
+  text-align: right;
+  margin-left: 230px;
+  line-height: 23px;
+opacity: 0; 
+}
+.areachart{
+  margin-left: 10px;
+}
+
+
 
 .fixed-comment{
   position: sticky;
@@ -82,15 +114,18 @@ margin-right: 50px;
 
 }
 
+
+
 .matrimonios-caption{
   position: sticky;
-  top: 550px;
+  top: 1150px;
   bottom: 0px; 
   font-size: 12px; 
   width: 210px;
   text-align: right;
-  margin-left: 230px;
+  margin-left: -230px;
   line-height: 23px;
   opacity:0;
  
 }
+
