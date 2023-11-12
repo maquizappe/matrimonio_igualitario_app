@@ -82,21 +82,22 @@
     
     .chupete {
         margin-top: -165px;
-        margin-left: -820px;
+        margin-left: -920px;
         display: flex;
         flex-direction: column;
         align-items: center;
-       
+        height: 170px;
         z-index:30;
         margin-left:-175%;
     }
     
     .chupete img {
-        height: 170px;
+        height: 130px;
         opacity: 1;
         transition: opacity 0.2s ease;
         position: relative; 
         z-index:4; 
+        margin-left: -40px;
     }
     
     
