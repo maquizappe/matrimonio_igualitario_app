@@ -9,7 +9,7 @@ function Vivienda() {
                 <div className="vivendaSubcomponentTitle">
                     <div className="vivendaTitle">Vivienda</div>
                     <div className="viviendaCaption">
-                        Protección de la vivienda como bien de familia Herencia </div>
+                        Protección de la vivienda como bien de familia. </div>
                 </div>
             </div >
             <div className="casita">

@@ -38,7 +38,7 @@ function Cover() {
           <div className="title">Matrimonio</div>
           <div className="subtitle">Igualitario</div>
           <div className="caption">
-          En un contexto en el que se cuestiona la importancia de ciertos derechos adquiridos, ofrecemos una analisis sobre la evolución e impacto del matrimonio igualitario. Una conquista pionera a nivel latinoamericano y de vanguarida mundial.
+          En un contexto en el que se cuestiona la importancia de ciertos derechos adquiridos, ofrecemos un analisis sobre la evolución e impacto del matrimonio igualitario. Una conquista pionera a nivel latinoamericano y de vanguarida mundial.
           </div>
         </div>
       </div>
