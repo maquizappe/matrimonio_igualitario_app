@@ -254,7 +254,7 @@ observer.disconnect();
 }, []);
 return (
     <div className="area-chart">
-      <svg ref={svgRef} width={450} height={230}>
+      <svg ref={svgRef} width={420} height={230}>
         
       </svg>
     </div>

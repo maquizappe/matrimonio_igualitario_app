@@ -78,6 +78,8 @@ export default function Home() {
 
 const areaAnimation = () => {
 gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duration:1, ease: "power1.inOut", delay:3})
+gsap.fromTo(".area-caption-2", { opacity:0,y: 0}, { opacity:1, y:-30,  duration:1, ease: "power1.inOut", delay:3})
+
 }
 
   return (
@@ -97,6 +99,8 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
            <AreaChart />
             </div>
             <div className='fake-areachart'>        <AreaChart_2 /></div>
+            <div className="area-caption-2">Las personas LGTBQ+ prefieren el matrimonio a la unión convivencial. En el año de la sanción de la Ley, la mayoría de los contrayentes tenían más de 50 años, logrando después de toda una vida ejercer este derecho. </div>
+      
           </div>
         </div>
 

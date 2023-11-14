@@ -16,7 +16,7 @@
   .fake-areachart{
     display: flex;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 40px;
 
    
   }
@@ -46,8 +46,8 @@
   
   .area-title{
     display: flex;
-    justify-content: flex-end; 
-    margin-right: 30px;
+    justify-content: flex-start;
+ margin-left: 20px;
     margin-top: -100px;
     font-size: 12px; 
    
@@ -55,27 +55,28 @@
   
   .area-subtitle{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     font-size: 8px; 
     margin-top:2px;
     margin-bottom: -30px;
-    margin-right: 30px;
+    margin-left: 20px;
+    
   
   }
   
-  .area-caption{
+  .area-caption{  
+    display:none}
+
+  .area-caption-2{  
+    font-size:8px; 
+    width: 150px;
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+      line-height: 12px;
+    opacity:1;
    
-
-    bottom: 0px; 
-    font-size: 12px; 
-    width: 210px;
-    text-align: right;
-    margin-left: 230px;
-    line-height: 20px;
-  opacity: 0; 
-
-  display:none;
-
 
 
   }
@@ -179,7 +180,9 @@
   .matrimonio-chart{
     display:block;
   }
-  
+  .area-caption-2{ 
+    display:none;
+  }
 
 .fake-areachart{
   display: none
