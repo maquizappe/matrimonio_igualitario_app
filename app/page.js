@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import Cover from "./components/cover/cover";
 import Piechart from "./components/piechart/piechart";
+import AreaChart_2 from "./components/ringschart/ringschart_2";
 import AreaChart from "./components/ringschart/ringschart";
 import CursorContextProvider from './components/cursor/CursorContextProvider';
 import Cursor from './components/cursor/Cursor';
@@ -18,6 +19,7 @@ import { gsap } from 'gsap';
 export default function Home() {
   const areaChartRef = useRef(null);
   const matrimonio = useRef();
+  const tl = useRef();
 
 
   
@@ -94,7 +96,7 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
           <div className="areachart"> 
            <AreaChart />
             </div>
-            <div className='fake-areachart'>    <img src="./ring_chart_image.png" alt="ring" /> </div>
+            <div className='fake-areachart'>        <AreaChart_2 /></div>
           </div>
         </div>
 
@@ -117,7 +119,7 @@ gsap.fromTo(".area-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duratio
           </div>
         </div>
 
-        <div> <Cierre/></div>
+       <div> <Cierre/></div> 
         <Cursor />
 
       </CursorContextProvider>
