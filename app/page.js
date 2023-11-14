@@ -9,7 +9,9 @@ import Cursor from './components/cursor/Cursor';
 import Vivienda from './components/porquematrimonio/vivienda';
 import Adopcion from './components/porquematrimonio/adopcion';
 import Salud from './components/porquematrimonio/salud';
-import Matirmonioschart from './components/matrimonioschart/matrimonioschart';
+import Matirmonioschart_2 from './components/matrimonioschart/matrimonioschart_2';
+import Matirmonioschart_3 from './components/matrimonioschart/matrimonioschart_3';
+
 import Cierre from './components/cierre/cierre'
 import "./page.css";
 import { gsap } from 'gsap';
@@ -49,6 +51,9 @@ export default function Home() {
 
   const matrimonioAnimation = () => {
  gsap.fromTo(".matrimonios-caption", { opacity:0,y: -200}, { opacity:1, y:-250,  duration:1, ease: "power1.inOut", delay:1})
+ gsap.fromTo(".matrimonios-caption-2", { opacity:0,y: 0}, { opacity:1, y:-40,  duration:1, ease: "power1.inOut", delay:3})
+
+ 
   }
 
 
@@ -118,8 +123,10 @@ gsap.fromTo(".area-caption-2", { opacity:0,y: 0}, { opacity:1, y:-30,  duration:
           <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
                    <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
             <div className="matrimonios-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
-            <div className="matrimonio-chart"> <Matirmonioschart /> </div>
-            <div className='fake-areachart'>    <img src="./gais_chart.png" alt="ring" /> </div>
+            <div className="matrimonio-chart"> <Matirmonioschart_2 /> </div>
+            <div className='fake-areachart'>   <Matirmonioschart_3 /> </div>
+            <div className="matrimonios-caption-2">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
+         
           </div>
         </div>
 

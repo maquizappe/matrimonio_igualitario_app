@@ -6,7 +6,17 @@
     
   }
 
-
+  .matrimonios-caption-2{  
+    font-size:8px; 
+    width: 150px;
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+      line-height: 12px;
+    opacity:1;
+  }
+  
   .fake-areachart img{
     display: block;
     height: 270px;
@@ -16,7 +26,7 @@
   .fake-areachart{
     display: flex;
     justify-content: center;
-    margin-left: 40px;
+    margin-left: 50px;
 
    
   }
@@ -76,10 +86,9 @@
     justify-content: flex-end;
       line-height: 12px;
     opacity:1;
-   
-
-
   }
+
+
   .areachart{
     margin-left: 10px;
     display: none;
@@ -179,6 +188,9 @@
 
   .matrimonio-chart{
     display:block;
+  }
+  .matrimonios-caption-2{
+    display: none;
   }
   .area-caption-2{ 
     display:none;
