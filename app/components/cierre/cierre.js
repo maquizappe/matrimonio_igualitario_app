@@ -52,11 +52,11 @@ function Cierre() {
                 className="cierre-title"
             
             >
-                Let's go for more rights
+                Vamos por más derechos
             </div>
             <div className="cierre-caption"
             
-            >It is clear that a more egalitarian society is benefitial to all, it is important to protect the rigths that have been won and only question them in order to expand and improve them </div>
+            >Es evidente que una sociedad más igualitaria es beneficiosa para todos/as. Es importante proteger los derechos conquistados, y solo cuestionarlos para ampliarlos y mejorarlos. </div>
 
             <div className="cierre-imagen-component"  ref={cierre_tl}>
                 <div className="cierre-imagen-1" >
