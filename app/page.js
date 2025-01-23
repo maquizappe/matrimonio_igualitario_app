@@ -96,7 +96,7 @@ gsap.fromTo(".area-caption-2", { opacity:0,y: 0}, { opacity:1, y:-30,  duration:
         <div>        <Piechart />       </div>
         <div className="area-chart-wrapper" ref={areaChartRef}>
           <div className="fixed-content" >
-          <div className="area-caption">Las personas LGTBQ+ prefieren el matrimonio a la unión convivencial. En el año de la sanción de la Ley, la mayoría de los contrayentes tenían más de 50 años, logrando después de toda una vida ejercer este derecho. </div>
+          <div className="area-caption">LGBTQ+ people prefer marriage to cohabitation. In the year the law was passed, most of the spouses were over 50 years old, having managed to exercise this right after a lifetime of experience. </div>
       
             <div className="area-title"> De la unión convivencial al matrimonio igualitario </div>
             <div className="area-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
