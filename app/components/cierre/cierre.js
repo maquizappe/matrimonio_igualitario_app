@@ -52,7 +52,7 @@ function Cierre() {
                 className="cierre-title"
             
             >
-                Vamos por más derechos
+                Let's go for more rights
             </div>
             <div className="cierre-caption"
             
