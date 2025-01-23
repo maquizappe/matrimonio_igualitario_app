@@ -106,7 +106,7 @@ const loadData = async () => {
                 .attr("y", y(newData[newData.length - 1].value)) // Use the last data point for the y-position
                 .text(`same-sex marriage: ${newData[newData.length - 1].value.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
-                .attr("font-size", "12px");
+                .attr("font-size", "11px");
 
 
             g.append("text")
@@ -115,7 +115,7 @@ const loadData = async () => {
                 .attr("y", y(newData[newData.length - 1].uc)) // Use the last data point for the y-position
                 .text(`Domestic partnership: ${newData[newData.length - 1].uc.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
-                .attr("font-size", "12px");
+                .attr("font-size", "11px");
 
             // Add image elements for each year in newData
             newData.forEach(function (d) {
@@ -141,7 +141,7 @@ const loadData = async () => {
                 .attr("y", y(newData[newData.length - 1].uc)) // Use the last data point for the y-position
                 .text(`Domestic partnership: ${newData[newData.length - 1].uc.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
-                .attr("font-size", "12px");
+                .attr("font-size", "11px");
         }
 
     }
