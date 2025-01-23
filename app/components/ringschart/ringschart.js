@@ -104,7 +104,7 @@ const loadData = async () => {
                 .attr("class", "value-label")
                 .attr("x", x(newData[newData.length - 1].year) + 35) // Adjust the x-position as needed
                 .attr("y", y(newData[newData.length - 1].value)) // Use the last data point for the y-position
-                .text(`Same-sex marriage: ${newData[newData.length - 1].value.toLocaleString()}`)
+                .text(`same-sex marriage: ${newData[newData.length - 1].value.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
                 .attr("font-size", "14px");
 
@@ -139,7 +139,7 @@ const loadData = async () => {
                 .attr("class", "value-label")
                 .attr("x", x(newData[newData.length - 1].year) + 10) // Adjust the x-position as needed
                 .attr("y", y(newData[newData.length - 1].uc)) // Use the last data point for the y-position
-                .text(`Uniones civiles: ${newData[newData.length - 1].uc.toLocaleString()}`)
+                .text(`Domestic partnership: ${newData[newData.length - 1].uc.toLocaleString()}`)
                 .attr("fill", "#3E3E3E")
                 .attr("font-size", "14px");
         }
