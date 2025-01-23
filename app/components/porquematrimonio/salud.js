@@ -7,9 +7,9 @@ function Salud() {
         <div className="saludComponent">
                  <div className="saludComponentTitle">
                 <div className="saludSubcomponentTitle">
-                    <div className="saludTitle">Salud</div>
+                    <div className="saludTitle">Health</div>
  <div className="saludCaption">
- Derecho a compartir obra social </div> 
+ Right to share a common helath care services </div> 
                 </div>
             </div >
             <div className="imagen-derecha">
