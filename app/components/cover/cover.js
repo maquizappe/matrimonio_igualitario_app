@@ -35,10 +35,10 @@ function Cover() {
       <div  className="Margintop">  </div> 
       <div className="contentcover">      
         <div className="contentTile">
-          <div className="title">Matrimonio</div>
-          <div className="subtitle">Igualitario</div>
+          <div className="title">Same-sex</div>
+          <div className="subtitle">Marriage</div>
           <div className="caption">
-          En un contexto en el que se cuestiona la importancia de ciertos derechos adquiridos, ofrecemos un analisis sobre la evolución e impacto del matrimonio igualitario. Una conquista pionera a nivel latinoamericano y de vanguarida mundial.
+          In a context in which the importance of certain acquired rights is being questioned, we offer an analysis of the evolution and impact of egalitarian marriage. A pioneering achievement in Latin America with global impact.
           </div>
         </div>
       </div>
