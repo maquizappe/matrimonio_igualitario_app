@@ -7,9 +7,9 @@ function Adopcion() {
         <div className="adopcionComponent">
                  <div className="adopcionComponentTitle">
                 <div className="adopcionSubcomponentTitle">
-                    <div className="adopcionTitle">Adopcion</div>
+                    <div className="adopcionTitle">Adoption</div>
                    <div className="adopcionCaption">
-          Derecho a la adopción conjunta </div>
+          Right to adopt a child as a couple </div>
                 </div>
             </div >
             <div className="chupete">
