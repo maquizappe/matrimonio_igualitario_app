@@ -96,22 +96,22 @@ gsap.fromTo(".area-caption-2", { opacity:0,y: 0}, { opacity:1, y:-30,  duration:
         <div>        <Piechart />       </div>
         <div className="area-chart-wrapper" ref={areaChartRef}>
           <div className="fixed-content" >
-          <div className="area-caption">LGBTQ+ people prefer marriage to cohabitation. In the year the law was passed, most of the spouses were over 50 years old, having managed to exercise this right after a lifetime of experience. </div>
+          <div className="area-caption">LGBTQ+ people prefer marriage to domestic partnership. In the year the law was passed, most of the spouses were over 50 years old, having managed to exercise this right after a lifetime of experience. </div>
       
-            <div className="area-title"> De la unión convivencial al matrimonio igualitario </div>
-            <div className="area-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
+            <div className="area-title"> From domestic partnership to same-sex marriage </div>
+            <div className="area-subtitle"> Its historical evolution in the city of Buenos Aires </div>
           <div className="areachart"> 
            <AreaChart />
             </div>
             <div className='fake-areachart'>        <AreaChart_2 /></div>
-            <div className="area-caption-2">Las personas LGTBQ+ prefieren el matrimonio a la unión convivencial. En el año de la sanción de la Ley, la mayoría de los contrayentes tenían más de 50 años, logrando después de toda una vida ejercer este derecho. </div>
+            <div className="area-caption-2">LGBTQ+ people prefer marriage to domestic partnership. In the year the law was passed, most of the spouses were over 50 years old, having managed to exercise this right after a lifetime of experience. </div>
       
           </div>
         </div>
 
         <div className="component-matrimonio"> 
-        <div className="porque-matrimonio"> ¿Por qué se elige el matrimonio? </div>
-            <div className="porque-matrimonio-subtitle"> Beneficios frente a las uniones convivenciales </div>
+        <div className="porque-matrimonio"> Why get married? </div>
+            <div className="porque-matrimonio-subtitle"> Benefits versus domestic partherships </div>
            
         <div> <Vivienda /> </div>
         <div> <Adopcion /> </div>
@@ -120,12 +120,12 @@ gsap.fromTo(".area-caption-2", { opacity:0,y: 0}, { opacity:1, y:-30,  duration:
 
         <div className="matrimonios-chart-wrapper" ref={matrimonio}>
           <div className="matrimonios-content" >
-          <div className="matrimonios-caption">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
-                   <div className="matrimonios-title"> Matrimonios LGTBQ+ </div>
-            <div className="matrimonios-subtitle"> Su evolución histórica en la Ciudad de Buenos Aires </div>
+          <div className="matrimonios-caption">Over the years, the gap between men an women getting mattied has narrowed over. </div>
+                   <div className="matrimonios-title"> LGTBQ+ Marriages </div>
+            <div className="matrimonios-subtitle"> Its historical evolution in the city of Buenos Aires </div>
             <div className="matrimonio-chart"> <Matirmonioschart_2 /> </div>
             <div className='fake-areachart'>   <Matirmonioschart_3 /> </div>
-            <div className="matrimonios-caption-2">A lo largo de los años es cada vez menor la brecha entre varones y mujeres que contraen matrimonio. </div>
+            <div className="matrimonios-caption-2">Over the years, the gap between men an women getting mattied has narrowed over.</div>
          
           </div>
         </div>
